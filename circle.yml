@@ -1,0 +1,13 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:zagin.git $CIRCLE_SHA1:refs/heads/master
+
+machine:
+  ruby:
+    version: 2.0.0
+
+notify:
+  webhooks:
+    - url: https://idobata.io/hook/circle_ci/32a818a0-2c43-4f14-b118-64f8dae7ae6b
