@@ -4,6 +4,8 @@ gem "lita"
 gem 'lita-pebbles'
 gem 'lita-idobata'
 gem 'lita-google-images'
+gem 'lita-talk'
+
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
 
