@@ -24,10 +24,8 @@ Lita.configure do |config|
   # config.adapter.password = "secret"
 
   ## Example: Set options for the Redis connection.
-  config.redis.url = ENV["REDISTOGO_URL"]
-  config.http.port = ENV["PORT"]
-  # config.redis.host = "127.0.0.1"
-  # config.redis.port = 1234
+  config.redis[:url] = ENV["REDISTOGO_URL"]
+  config.http.port   = ENV["PORT"] || 3456
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
@@ -35,8 +33,9 @@ Lita.configure do |config|
   config.robot.name = "zagin"
   config.robot.log_level = :info
   config.robot.adapter = :idobata
-  config.adapter.api_token = ENV['API_TOKEN']
+  config.adapters.idobata.api_token = ENV["API_TOKEN"]
   config.handlers.schedules.room              = ENV["BOT_ROOM_ID"]
   config.handlers.schedules.should_sleep_at   = '* 23 * * * Asia/Tokyo'
   config.handlers.schedules.should_wake_up_at = '* 8  * * * Asia/Tokyo'
+
 end
