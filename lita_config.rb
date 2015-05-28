@@ -39,4 +39,6 @@ Lita.configure do |config|
   config.handlers.schedules.room              = ENV["BOT_ROOM_ID"]
   config.handlers.schedules.should_sleep_at   = '* 23 * * * Asia/Tokyo'
   config.handlers.schedules.should_wake_up_at = '* 8  * * * Asia/Tokyo'
+  config.handlers.talk.docomo_api_key         = ENV['DOCOMO_API_KEY']
+  config.handlers.talk.docomo_character_id = 30
 end
