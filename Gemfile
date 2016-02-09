@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby '2.3.0'
+
 gem "lita"
 gem 'lita-pebbles'
 gem 'lita-idobata'
