@@ -41,4 +41,6 @@ Lita.configure do |config|
   config.handlers.schedules.should_wake_up_at = '* 8  * * * Asia/Tokyo'
   config.handlers.talk.docomo_api_key         = ENV['DOCOMO_API_KEY']
   config.handlers.talk.docomo_character_id = 30
+  config.handlers.google_images.google_cse_id = ENV['GOOGLE_CSE_ID']
+  config.handlers.google_images.google_cse_key = ENV['GOOGLE_CSE_KEY']
 end
